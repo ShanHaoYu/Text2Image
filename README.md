@@ -19,9 +19,13 @@
 ### Result after 800 epochs
 <img src="train_samples/train_800.png"/>
 
-## My thoughts
-### Pros
-### Cons
+## Some thoughts
+* Use stackGAN can get better result, despite the improved-wgan with skip-thought also can produce satisfying one. 
+* Get more captions per images, that is, randomly choose 3~5 captions for each picture (if we choose all captions, the training set is so   large that it takes long time to train).
+* Add 'wrong image with false label' to train with D:
+  That is, give a caption and a random image from dataset, and give it false label.
+  (To let D learn whether the image has relation with the caption.)
+* The result of random distortion to images is not good as I think. 
 
 ## Reference
  * StackGAN++ PyTorch [paper](https://arxiv.org/abs/1710.10916) [code](https://github.com/hanzhanggit/StackGAN-v2)
